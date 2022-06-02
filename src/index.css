@@ -37,4 +37,12 @@
   .item {
     @apply mr-5 flex items-center cursor-pointer
   }
+
+  .positive {
+    @apply text-green-600
+  }
+
+  .negative {
+    @apply text-red-600
+  }
 }
