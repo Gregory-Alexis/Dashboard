@@ -17,8 +17,8 @@ const Home = () => {
           <Widget type="balance" />
         </div>
         <div className="flex py-2 px-6 gap-5">
-          <Featured className="flex-5" />
-          <Chart className="flex-2" />
+          <Featured />
+          <Chart />
         </div>
       </div>
     </div>
