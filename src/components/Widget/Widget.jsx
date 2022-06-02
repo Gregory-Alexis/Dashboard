@@ -33,7 +33,7 @@ const Widget = ({ type }) => {
       data = {
         title: "ORDERS",
         isMoney: false,
-        link: "See all users",
+        link: "View all orders",
         icon: (
           <ShoppingCartOutlined
             style={{
