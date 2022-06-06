@@ -2,6 +2,7 @@ import Chart from "../../components/Chart/Chart";
 import Featured from "../../components/Featured/Featured";
 import Navbar from "../../components/Navbar/Navbar";
 import SideBar from "../../components/Sidebar/SideBar";
+import Table from "../../components/List/List";
 import Widget from "../../components/Widget/Widget";
 
 const Home = () => {
@@ -19,6 +20,12 @@ const Home = () => {
         <div className="flex py-2 px-6 gap-5">
           <Featured />
           <Chart />
+        </div>
+        <div className="p-2 m-4 shadow-card">
+          <div className="font-semibold text-gray-400 mb-5">
+            Dernière transaction
+          </div>
+          <Table />
         </div>
       </div>
     </div>
