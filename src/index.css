@@ -45,4 +45,12 @@
   .negative {
     @apply text-red-600
   }
+
+  .approved {
+    @apply text-green-600 bg-approved
+  }
+  .pending {
+    @apply text-yellow-500 bg-pending
+
+  }
 }
