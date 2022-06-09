@@ -2,7 +2,7 @@ import Chart from "../../components/Chart/Chart";
 import Featured from "../../components/Featured/Featured";
 import Navbar from "../../components/Navbar/Navbar";
 import SideBar from "../../components/Sidebar/SideBar";
-import Table from "../../components/List/List";
+import Table from "../../components/Table/Table";
 import Widget from "../../components/Widget/Widget";
 
 const Home = () => {
