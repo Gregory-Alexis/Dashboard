@@ -9,6 +9,8 @@ module.exports = {
         primary: "#6439ff",
         approved: "rgba(0, 128, 0, 0.151)",
         pending: "rgba(189, 189, 3, 0.200)",
+        active: "rgba(0, 128, 0, 0.05)",
+        passive: "rgba(255, 0, 0, 0.05)",
       },
       flex: {
         2: "2 2 0%",
