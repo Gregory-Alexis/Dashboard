@@ -87,20 +87,20 @@ const List = () => {
                   {row.product}
                 </div>
               </TableCell>
-              <TableCell className="tableCell">{row.customer}</TableCell>
-              <TableCell className="tableCell">{row.date}</TableCell>
-              <TableCell className="tableCell">{row.amount}</TableCell>
-              <TableCell className="tableCell">{row.method}</TableCell>
-              <TableCell className="tableCell">
-                <span
+              <TableCell>{row.customer}</TableCell>
+              <TableCell>{row.date}</TableCell>
+              <TableCell>{row.amount}</TableCell>
+              <TableCell>{row.method}</TableCell>
+              <TableCell>
+                <spa
                   className={`rounded ${
                     row.status === "Approved" ? "approved" : "pending"
-                  } p-3 `}
+                  }  `}
                 >
                   {row.status}
-                </span>
+                </spa>
               </TableCell>
-              <TableCell className="tableCell">{row.product}</TableCell>
+              <TableCell>{row.product}</TableCell>
             </TableRow>
           ))}
         </TableBody>
