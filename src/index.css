@@ -3,21 +3,7 @@
 @tailwind utilities;
 
 @layer components{
-  .sidebar{
 
-  }
-
-  .top {
-
-  }
-
-  .center {
-
-  }
-
-  .bottom {
-    
-  }
   /* list style */
   .title {
     @apply text-sm font-bold mt-4 mb-1 text-gray-400
@@ -47,10 +33,18 @@
   }
 
   .approved {
-    @apply text-green-600 bg-approved
+    @apply text-green-600 bg-approved p-2
   }
   .pending {
-    @apply text-yellow-500 bg-pending
+    @apply text-yellow-500 bg-pending p-2 rounded-md
 
+  }
+
+  .active {
+    @apply text-green-600 bg-active p-2 rounded-md
+  }
+
+  .passive {
+    @apply text-red-600 bg-passive p-2 rounded-md
   }
 }
