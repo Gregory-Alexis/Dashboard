@@ -6,8 +6,12 @@ export const userColumns = [
     width: 230,
     renderCell: (params) => {
       return (
-        <div className="cellWithImg">
-          <img className="cellImg" src={params.row.img} alt="avatar" />
+        <div className="flex items-center">
+          <img
+            className=" w-12 h-12 rounded-full mr-4 object-cover"
+            src={params.row.img}
+            alt="avatar"
+          />
           {params.row.username}
         </div>
       );
