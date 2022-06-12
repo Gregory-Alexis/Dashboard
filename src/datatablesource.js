@@ -33,11 +33,7 @@ export const userColumns = [
     headerName: "Status",
     width: 160,
     renderCell: (params) => {
-      return (
-        <div className={`cellWithStatus ${params.row.status}`}>
-          {params.row.status}
-        </div>
-      );
+      return <div className={`${params.row.status}`}>{params.row.status}</div>;
     },
   },
 ];
