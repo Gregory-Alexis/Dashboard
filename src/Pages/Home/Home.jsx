@@ -19,12 +19,10 @@ const Home = () => {
         </div>
         <div className="flex py-2 px-6 gap-5">
           <Featured />
-          <Chart />
+          <Chart aspect={2 / 1} title="Revenues des 6 derniers mois" />
         </div>
         <div className="p-2 m-4 shadow-card">
-          <div className="font-semibold text-gray-400 mb-5">
-            Dernière transaction
-          </div>
+          <div className="font-semibold  mb-5">Dernière transaction</div>
           <Table />
         </div>
       </div>
