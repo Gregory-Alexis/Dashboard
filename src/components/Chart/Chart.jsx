@@ -2,7 +2,6 @@ import {
   AreaChart,
   Area,
   XAxis,
-  YAxis,
   CartesianGrid,
   Tooltip,
   ResponsiveContainer,
@@ -17,13 +16,11 @@ const data = [
   { name: "Juin", Total: 1700 },
 ];
 
-const Chart = () => {
+const Chart = ({ aspect, title }) => {
   return (
     <div className="flex-5 shadow-chart">
-      <div className="text-gray-400 mb-6 ">
-        Les revenues des 6 derniers mois
-      </div>
-      <ResponsiveContainer width="100%" aspect={2 / 1}>
+      <div className="text-gray-400 mb-6 ">{title}</div>
+      <ResponsiveContainer width="100%" aspect={aspect} title={title}>
         <AreaChart
           width={730}
           height={250}
