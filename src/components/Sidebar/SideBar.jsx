@@ -10,39 +10,48 @@ import PsychologyIcon from "@mui/icons-material/Psychology";
 import SettingsIcon from "@mui/icons-material/Settings";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import LogoutIcon from "@mui/icons-material/Logout";
+import { Link } from "react-router-dom";
 
 const SideBar = () => {
   return (
     <div className="flex-1 border-r border-gray-200 min-h-screen">
       <div className="flex items-center justify-center h-16 border-b-2 border-gray-200">
-        <span className="text-xl font-bold text-primary">Greg</span>
+        <Link to="/">
+          <span className="text-xl font-bold text-primary">Greg</span>
+        </Link>
       </div>
 
       <div className="pl-4">
         <ul>
           <h1 className="title">MAIN</h1>
-          <li className="list">
-            <DashboardIcon
-              style={{ fontSize: "20px" }}
-              className="text-purple-500"
-            />
-            <span className="listTitle">DashBoard</span>
-          </li>
+          <Link to="/">
+            <li className="list">
+              <DashboardIcon
+                style={{ fontSize: "20px" }}
+                className="text-purple-500"
+              />
+              <span className="listTitle">DashBoard</span>
+            </li>
+          </Link>
           <h1 className="title">LIST</h1>
-          <li className="list">
-            <PersonOutlineIcon
-              style={{ fontSize: "20px" }}
-              className="text-purple-500"
-            />
-            <span className="listTitle">Users</span>
-          </li>
-          <li className="list">
-            <StoreIcon
-              style={{ fontSize: "20px" }}
-              className="text-purple-500"
-            />
-            <span className="listTitle">Products</span>
-          </li>
+          <Link to="/users">
+            <li className="list">
+              <PersonOutlineIcon
+                style={{ fontSize: "20px" }}
+                className="text-purple-500"
+              />
+              <span className="listTitle">Users</span>
+            </li>
+          </Link>
+          <Link to="/products">
+            <li className="list">
+              <StoreIcon
+                style={{ fontSize: "20px" }}
+                className="text-purple-500"
+              />
+              <span className="listTitle">Products</span>
+            </li>
+          </Link>
           <li className="list">
             <CreditCardIcon
               style={{ fontSize: "20px" }}
