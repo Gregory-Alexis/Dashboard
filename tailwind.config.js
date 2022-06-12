@@ -23,6 +23,7 @@ module.exports = {
         search: "0px 1px 3px 0.5px rgb(0 0 0 / 0.2)",
         card: "1px 2px 4px 1px rgb(0 0 0 / 0.2)",
         chart: "2px 2px 4px 1px rgb(0 0 0 / 0.2)",
+        user: "0px 6px 10px 1px rgb(0 0 0 / 0.2)",
       },
     },
   },
