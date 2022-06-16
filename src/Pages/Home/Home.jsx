@@ -22,7 +22,7 @@ const Home = () => {
           <Chart aspect={2 / 1} title="Revenues des 6 derniers mois" />
         </div>
         <div className="p-2 m-4 shadow-card">
-          <div className="font-semibold  mb-5">Dernière transaction</div>
+          <div className="font-semibold mb-5">Dernière transaction</div>
           <Table />
         </div>
       </div>
