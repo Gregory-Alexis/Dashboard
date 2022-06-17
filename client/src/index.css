@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+
+  /* list style */
+  .title {
+    @apply text-sm font-bold mt-4 mb-1 text-gray-400
+  }
+  .list {
+    @apply flex items-center p-2 cursor-pointer hover:bg-purple-200
+  }
+  .listTitle {
+    @apply ml-2 text-gray-500 font-semibold
+  }
+
+  /* color style */
+  .colorOption {
+    @apply w-8 h-8 border rounded-full mx-2 border-gray-500 cursor-pointer
+  }
+
+  .item {
+    @apply mr-5 flex items-center cursor-pointer
+  }
+
+  .positive {
+    @apply text-green-600
+  }
+
+  .negative {
+    @apply text-red-600
+  }
+
+  .approved {
+    @apply text-green-600 bg-approved p-2
+  }
+  .pending {
+    @apply text-yellow-500 bg-pending p-2 rounded-md
+
+  }
+
+  .active {
+    @apply text-green-600 bg-active p-2 rounded-md
+  }
+
+  .passive {
+    @apply text-red-600 bg-passive p-2 rounded-md
+  }
+}
