@@ -1,20 +1,15 @@
 const express = require("express");
-const bodyParser = require("body-parser");
+const cors = require("cors");
+const colors = require("colors");
 const app = express();
+const dotenv = require("dotenv").config();
+const { errorHandler } = require("./middleware/errorMiddleware");
+const { connectDB } = require("./config/db");
 
-app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader(
-    "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content, Accept, Content-Type, Authorization"
-  );
-  res.setHeader(
-    "Access-Control-Allow-Methods",
-    "GET, POST, PUT, DELETE, PATCH, OPTIONS"
-  );
-  next();
-});
+connectDB();
 
-app.use(bodyParser.json());
+app.use(cors());
+app.use(express.json());
+app.unsubscribe(errorHandler);
 
 module.exports = app;
