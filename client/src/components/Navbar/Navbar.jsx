@@ -5,7 +5,9 @@ import FullscreenExitOutlinedIcon from "@mui/icons-material/FullscreenExitOutlin
 import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNoneOutlined";
 import ChatBubbleOutlineOutlinedIcon from "@mui/icons-material/ChatBubbleOutlineOutlined";
 import ListOutlinedIcon from "@mui/icons-material/ListOutlined";
+import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import Avatar from "../../images/avatar.jpg";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -18,7 +20,15 @@ const Navbar = () => {
           />
           <SearchOutlinedIcon />
         </div>
-        <div className="flex">
+        <div className="flex items-center">
+          <Link to="/register">
+            <div className="item">
+              <PersonOutlineIcon
+                style={{ fontSize: "20px", marginRight: "3px" }}
+              />
+              <span className="text-base">Register</span>
+            </div>
+          </Link>
           <div className="item">
             <LanguageOutlinedIcon
               className="mr-2"
