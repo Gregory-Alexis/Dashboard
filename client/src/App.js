@@ -5,6 +5,7 @@ import List from "./Pages/List/List";
 import New from "./Pages/New/New";
 import Single from "./Pages/Single/Single";
 import { productInputs, userInputs } from "./formdata";
+import Register from "./Pages/Register/Register";
 
 const App = () => {
   return (
@@ -31,6 +32,7 @@ const App = () => {
             element={<New input={productInputs} title="Add New Product" />}
           />
         </Route>
+        <Route path="/register" element={<Register />} />
       </Routes>
     </BrowserRouter>
   );
