@@ -10,6 +10,8 @@ connectDB();
 
 app.use(cors());
 app.use(express.json());
-app.unsubscribe(errorHandler);
+app.use("/api/user", require("./routes/userRoutes"));
+
+app.use(errorHandler);
 
 module.exports = app;
