@@ -92,13 +92,13 @@ const List = () => {
               <TableCell>{row.amount}</TableCell>
               <TableCell>{row.method}</TableCell>
               <TableCell>
-                <spa
+                <span
                   className={`rounded ${
                     row.status === "Approved" ? "approved" : "pending"
                   }  `}
                 >
                   {row.status}
-                </spa>
+                </span>
               </TableCell>
               <TableCell>{row.product}</TableCell>
             </TableRow>
