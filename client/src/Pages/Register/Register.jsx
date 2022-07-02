@@ -1,6 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 import Navbar from "../../components/Navbar/Navbar";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
+import { register, reset } from "../../redux/features/auth/authslice";
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -13,6 +17,25 @@ const Register = () => {
 
   const { firstName, lastName, email, password, password2 } = formData;
 
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const { user, isLoading, isError, isSuccess, message } = useSelector(
+    (state) => state.auth
+  );
+
+  useEffect(() => {
+    if (isError) {
+      toast.error(message);
+    }
+
+    if (isSuccess || user) {
+      navigate("/");
+    }
+
+    dispatch(reset());
+  }, [user, isError, isSuccess, message, navigate, dispatch]);
+
   const onChange = (e) => {
     setFormData((prevState) => ({
       ...prevState,
@@ -22,7 +45,22 @@ const Register = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
+    if (password !== password2) {
+      throw new Error("Password do not match");
+    } else {
+      const userData = {
+        firstName,
+        lastName,
+        email,
+        password,
+      };
+      dispatch(register(userData));
+    }
   };
+
+  if (isLoading) {
+    return <p>Loading...</p>;
+  }
 
   return (
     <>
@@ -37,13 +75,14 @@ const Register = () => {
       </section>
 
       <section className="flex justify-center">
-        <form className="flex flex-col w-80" onChange={onChange}>
+        <form className="flex flex-col w-80">
           <input
             type="text"
             className="border-2  rounded pl-2 outline-none mb-2"
             id="firstName"
             name="firstName"
             value={firstName}
+            onChange={onChange}
             placeholder="Enter your firstName"
           />
           <input
@@ -52,6 +91,7 @@ const Register = () => {
             id="lastName"
             name="lastName"
             value={lastName}
+            onChange={onChange}
             placeholder="Enter your lastName"
           />
           <input
@@ -60,6 +100,7 @@ const Register = () => {
             id="email"
             name="email"
             value={email}
+            onChange={onChange}
             placeholder="Enter your email"
           />
           <input
@@ -68,14 +109,16 @@ const Register = () => {
             id="password"
             name="password"
             value={password}
+            onChange={onChange}
             placeholder="Enter your password"
           />
           <input
-            type="password2"
+            type="password"
             className="border-2 rounded pl-2 outline-none mb-2"
             id="password2"
             name="password2"
             value={password2}
+            onChange={onChange}
             placeholder="Confirm your password"
           />
           <div>
