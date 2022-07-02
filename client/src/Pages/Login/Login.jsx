@@ -3,6 +3,7 @@ import { SignpostOutlined } from "@mui/icons-material";
 
 const Login = () => {
   const [formData, setFormData] = useState({
+    email: "",
     password: "",
   });
 
